@@ -60,11 +60,11 @@
                         imgUrl: "//s.qunarzz.com/homenode/images/touchheader/package.png",
                         desc:"度假",
                     },
-                    {
-                        id:"009",
-                        imgUrl: "//s.qunarzz.com/homenode/images/touchheader/piao.png",
-                        desc:"景点门票",
-                    },
+                    // {
+                    //     id:"009",
+                    //     imgUrl: "//s.qunarzz.com/homenode/images/touchheader/piao.png",
+                    //     desc:"景点门票",
+                    // },
 
                 ]
             }
@@ -92,36 +92,38 @@
         height :0
         padding-bottom :50%
         /*background-color :green*/
-    .icon
-        position :relative
-        float :left
-        height :0
-        width :25%
-        padding-bottom 25%
-        /*background-color :red*/
-        .icon-img
-            position :absolute
-            /*background-color :blue*/
-            top :0
-            left :0
-            right :0
-            bottom :.44rem
-            box-sizing :border-box
-            padding :.1rem
-            .icon-img-content
-                display :block
-                margin :0 auto
-                height :100%
-        .icon-desc
-            position :absolute
-            left :0
-            right :0
-            bottom :0
-            height :.44rem
-            line-height :.44rem
-            color :$darkTextColor
-            text-align :center
-            overflow :hidden
-            white-space :nowrap
-            ellipsis()
+    .icons
+        margin-top :.1rem
+        .icon
+            position :relative
+            float :left
+            height :0
+            width :25%
+            padding-bottom 25%
+            /*background-color :red*/
+            .icon-img
+                position :absolute
+                /*background-color :blue*/
+                top :0
+                left :0
+                right :0
+                bottom :.44rem
+                box-sizing :border-box
+                padding :.1rem
+                .icon-img-content
+                    display :block
+                    margin :0 auto
+                    height :100%
+            .icon-desc
+                position :absolute
+                left :0
+                right :0
+                bottom :0
+                height :.44rem
+                line-height :.44rem
+                color :$darkTextColor
+                text-align :center
+                overflow :hidden
+                white-space :nowrap
+                ellipsis()
 </style>
