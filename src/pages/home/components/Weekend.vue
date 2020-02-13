@@ -2,7 +2,7 @@
     <div>
         <div class="title">周末去哪</div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item of weekendList" :key="item.id">
                 <div class="item-img-wrapper">
                     <img class="item-img" :src="item.imgUrl"/>
                 </div>
@@ -21,29 +21,8 @@
 <script>
     export default {
         name: "HomeWeekend",
-        data(){
-            return{
-                recommendList:[
-                    {
-                        id:"001",
-                        imgUrl:"//imgs.qunarzz.com/vc/44/e9/86/95bc36c9e1c06ebd68bdfe222e.jpg_92.jpg",
-                        title:"川山群岛旅游度假区",
-                        desc:"气候温和，四季如春，是理想度假旅游圣地"
-                    },
-                    {
-                        id:"002",
-                        imgUrl:"//imgs.qunarzz.com/vc/44/e9/86/95bc36c9e1c06ebd68bdfe222e.jpg_92.jpg",
-                        title:"川山群岛旅游度假区",
-                        desc:"气候温和，四季如春，是理想度假旅游圣地"
-                    },
-                    {
-                        id:"003",
-                        imgUrl:"//imgs.qunarzz.com/vc/44/e9/86/95bc36c9e1c06ebd68bdfe222e.jpg_92.jpg",
-                        title:"川山群岛旅游度假区",
-                        desc:"气候温和，四季如春，是理想度假旅游圣地"
-                    }
-                ]
-            }
+        props:{
+            weekendList:Array
         }
     }
 </script>

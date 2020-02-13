@@ -18,29 +18,8 @@
 <script>
     export default {
         name: "HomeRecommend",
-        data(){
-            return{
-                recommendList:[
-                    {
-                        id:"001",
-                        imgUrl:"//imgs.qunarzz.com/vs_ceph_vs_tts/c4d16438-1809-4ee3-8195-4fbe9ce0118a.jpg_r_480x320x90_f19dc468.jpg",
-                        title:"深圳-迪拜 6天跟团游",
-                        desc:"玩转迪拜海陆空！6天不购物！游艇出海+沙漠冲沙+登高塔或金相框+全程国际五"
-                    },
-                    {
-                        id:"002",
-                        imgUrl:"//imgs.qunarzz.com/vs_ceph_vs_tts/c4d16438-1809-4ee3-8195-4fbe9ce0118a.jpg_r_480x320x90_f19dc468.jpg",
-                        title:"深圳-迪拜 6天跟团游",
-                        desc:"玩转迪拜海陆空！6天不购物！游艇出海+沙漠冲沙+登高塔或金相框+全程国际五"
-                    },
-                    {
-                        id:"003",
-                        imgUrl:"//imgs.qunarzz.com/vs_ceph_vs_tts/c4d16438-1809-4ee3-8195-4fbe9ce0118a.jpg_r_480x320x90_f19dc468.jpg",
-                        title:"深圳-迪拜 6天跟团游",
-                        desc:"玩转迪拜海陆空！6天不购物！游艇出海+沙漠冲沙+登高塔或金相框+全程国际五"
-                    }
-                ]
-            }
+        props:{
+            recommendList:Array
         }
     }
 </script>

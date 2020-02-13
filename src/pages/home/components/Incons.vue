@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-        <swiper>
+        <swiper :options="swiperOption">
             <swiper-slide v-for="(page,index) of pages" :key="index">
                 <div class="icon" v-for="item of page" :key="item.id">
                     <div class="icon-img">
@@ -19,60 +19,18 @@
         name: "HomeIncons",
         data(){
             return{
-                iconList:[
-                    {
-                        id:"001",
-                        imgUrl:"//s.qunarzz.com/homenode/images/touchheader/hotel.png",
-                        desc:"酒店优惠，打五折",
-                    },
-                    {
-                        id:"002",
-                        imgUrl:"//s.qunarzz.com/homenode/images/touchheader/flight.png",
-                        desc:"机票",
-                    },
-                    {
-                        id:"003",
-                        imgUrl: "//s.qunarzz.com/homenode/images/touchheader/train.png",
-                        desc:"火车票",
-                    },
-                    {
-                        id:"004",
-                        imgUrl: "//s.qunarzz.com/homenode/images/touchheader/package.png",
-                        desc:"度假",
-                    },
-                    {
-                        id:"005",
-                        imgUrl:"//s.qunarzz.com/homenode/images/touchheader/hotel.png",
-                        desc:"酒店",
-                    },
-                    {
-                        id:"006",
-                        imgUrl:"//s.qunarzz.com/homenode/images/touchheader/flight.png",
-                        desc:"机票",
-                    },
-                    {
-                        id:"007",
-                        imgUrl: "//s.qunarzz.com/homenode/images/touchheader/train.png",
-                        desc:"火车票",
-                    },
-                    {
-                        id:"008",
-                        imgUrl: "//s.qunarzz.com/homenode/images/touchheader/package.png",
-                        desc:"度假",
-                    },
-                    // {
-                    //     id:"009",
-                    //     imgUrl: "//s.qunarzz.com/homenode/images/touchheader/piao.png",
-                    //     desc:"景点门票",
-                    // },
-
-                ]
+                swiperOption:{
+                    autoplay:false,
+                }
             }
+        },
+        props:{
+            iconsList: Array
         },
         computed:{
             pages (){
                 const pages = [];
-                this.iconList.forEach((item,index) => {
+                this.iconsList.forEach((item,index) => {
                     const page = Math.floor(index/8)
                     if(!pages[page]){
                         pages[page] = []
@@ -99,7 +57,7 @@
             float :left
             height :0
             width :25%
-            padding-bottom 25%
+            padding-bottom :25%
             /*background-color :red*/
             .icon-img
                 position :absolute
