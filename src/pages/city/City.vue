@@ -14,6 +14,7 @@
     import CityAlphabet from "@/pages/city/components/Alphabet";
     import axios from 'axios'
 
+
     export default {
         name: "City",
         components:{
@@ -30,6 +31,7 @@
               hotCities:[],
               cities:{},
               letter:"",
+              lastCity:"",
           }
         },
         methods:{
