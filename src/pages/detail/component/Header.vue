@@ -63,6 +63,7 @@
             color :#ffffff
             font-size :.5rem
     .header-fixed
+        z-index :2
         position: fixed
         left :0
         top  :0
