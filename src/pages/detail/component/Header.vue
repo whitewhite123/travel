@@ -38,10 +38,10 @@
             }
 
         },
-        activated() {
+        mounted() {
             window.addEventListener('scroll', this.handleScroll)
         },
-        deactivated(){
+        unmounted(){
             window.removeEventListener('scroll', this.handleScroll)
         }
     }

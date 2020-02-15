@@ -24,7 +24,11 @@ const routes = [
     }
 ];
 const router = new Router({
-    routes
+    routes,
+    //切换路由，不改变页面的滚动
+    scrollBehavior () {
+        return { x: 0, y: 0 }
+    }
 });
 
 export default router

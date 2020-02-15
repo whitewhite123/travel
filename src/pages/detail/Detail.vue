@@ -23,13 +23,17 @@
           return{
               bannerImg:"",
               sightName:"",
-              gallaryImgs:Array,
-              categoryList:Array,
+              gallaryImgs:[],
+              categoryList:[],
           }
         },
         methods:{
             getDetailInfo(){
-                axios.get("/api/detail.json").then((result) => {
+                axios.get("/api/detail.json",{
+                    params:{
+                        id:this.$route.params.id
+                    }
+                }).then((result) => {
                     result = result.data;
                     console.log(result);
                     if(result.ret && result.data){
